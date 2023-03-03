@@ -21,13 +21,13 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 //
 // Select the network you want to deploy to here:
 //
-const defaultNetwork = "localhost";
+const defaultNetwork = "goerli";
 
 function mnemonic() {
   try {
     return fs.readFileSync("./mnemonic.txt").toString().trim();
   } catch (e) {
-    if (defaultNetwork !== "localhost") {
+    if (defaultNetwork !== "goerli") {
       console.log("☢️ WARNING: No mnemonic file created for a deploy account. Try `yarn run generate` and then `yarn run account`.")
     }
   }
@@ -51,31 +51,31 @@ module.exports = {
       */
     },
     rinkeby: {
-      url: "https://rinkeby.infura.io/v3/568af3da01a043ecb2ac80bf69927b38", //<---- YOUR INFURA ID! (or it won't work)
+      url: "https://rinkeby.infura.io/v3/69141c8dc4344a3cbd242de6cc378eb1", //<---- YOUR INFURA ID! (or it won't work)
       accounts: {
         mnemonic: mnemonic(),
       },
     },
     kovan: {
-      url: "https://kovan.infura.io/v3/62e4d4d8e861447686db464b423bc591", //<---- YOUR INFURA ID! (or it won't work)
+      url: "https://kovan.infura.io/v3/69141c8dc4344a3cbd242de6cc378eb1", //<---- YOUR INFURA ID! (or it won't work)
       accounts: {
         mnemonic: mnemonic(),
       },
     },
     mainnet: {
-      url: "https://mainnet.infura.io/v3/62e4d4d8e861447686db464b423bc591", //<---- YOUR INFURA ID! (or it won't work)
+      url: "https://mainnet.infura.io/v3/69141c8dc4344a3cbd242de6cc378eb1", //<---- YOUR INFURA ID! (or it won't work)
       accounts: {
         mnemonic: mnemonic(),
       },
     },
     ropsten: {
-      url: "https://ropsten.infura.io/v3/62e4d4d8e861447686db464b423bc591", //<---- YOUR INFURA ID! (or it won't work)
+      url: "https://ropsten.infura.io/v3/69141c8dc4344a3cbd242de6cc378eb1", //<---- YOUR INFURA ID! (or it won't work)
       accounts: {
         mnemonic: mnemonic(),
       },
     },
     goerli: {
-      url: "https://goerli.infura.io/v3/62e4d4d8e861447686db464b423bc591", //<---- YOUR INFURA ID! (or it won't work)
+      url: "https://goerli.infura.io/v3/69141c8dc4344a3cbd242de6cc378eb1", //<---- YOUR INFURA ID! (or it won't work)
       accounts: {
         mnemonic: mnemonic(),
       },
