@@ -27,7 +27,7 @@ function mnemonic() {
   try {
     return fs.readFileSync("./mnemonic.txt").toString().trim();
   } catch (e) {
-    if (defaultNetwork !== "goerli") {
+    if (defaultNetwork !== "localhost") {
       console.log("☢️ WARNING: No mnemonic file created for a deploy account. Try `yarn run generate` and then `yarn run account`.")
     }
   }
@@ -51,31 +51,31 @@ module.exports = {
       */
     },
     rinkeby: {
-      url: "https://rinkeby.infura.io/v3/69141c8dc4344a3cbd242de6cc378eb1", //<---- YOUR INFURA ID! (or it won't work)
+      url: "https://rinkeby.infura.io/v3/62e4d4d8e861447686db464b423bc591", //<---- YOUR INFURA ID! (or it won't work)
       accounts: {
         mnemonic: mnemonic(),
       },
     },
     kovan: {
-      url: "https://kovan.infura.io/v3/69141c8dc4344a3cbd242de6cc378eb1", //<---- YOUR INFURA ID! (or it won't work)
+      url: "https://kovan.infura.io/v3/62e4d4d8e861447686db464b423bc591", //<---- YOUR INFURA ID! (or it won't work)
       accounts: {
         mnemonic: mnemonic(),
       },
     },
     mainnet: {
-      url: "https://mainnet.infura.io/v3/69141c8dc4344a3cbd242de6cc378eb1", //<---- YOUR INFURA ID! (or it won't work)
+      url: "https://mainnet.infura.io/v3/62e4d4d8e861447686db464b423bc591", //<---- YOUR INFURA ID! (or it won't work)
       accounts: {
         mnemonic: mnemonic(),
       },
     },
     ropsten: {
-      url: "https://ropsten.infura.io/v3/69141c8dc4344a3cbd242de6cc378eb1", //<---- YOUR INFURA ID! (or it won't work)
+      url: "https://ropsten.infura.io/v3/62e4d4d8e861447686db464b423bc591", //<---- YOUR INFURA ID! (or it won't work)
       accounts: {
         mnemonic: mnemonic(),
       },
     },
     goerli: {
-      url: "https://goerli.infura.io/v3/69141c8dc4344a3cbd242de6cc378eb1", //<---- YOUR INFURA ID! (or it won't work)
+      url: "https://eth-goerli.g.alchemy.com/v2/wiYDyu8Pt1l-5dVvz_qfW3mvQ96KbmGI", //<---- YOUR INFURA ID! (or it won't work)
       accounts: {
         mnemonic: mnemonic(),
       },
